@@ -1,0 +1,26 @@
+.hero {
+    position: relative;
+}
+
+.hero-pic > img {
+    width: 100%;
+}
+
+.hero-container {
+    position: absolute;
+    border: solid red;
+    width: 50%;
+}
+
+.hero-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F78065;
+    color: white;
+    border: none;
+    gap: 10px;
+    width: 150px;
+
+
+}
