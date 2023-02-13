@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let serviceSection = document.querySelector(".services");
 
+
     services.forEach((service) => { 
         let card = document.createElement("article");
         card.classList = "article-cards";
@@ -42,6 +43,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
-    
+    let facilitySection = document.querySelector(".facilities");
+
+    document.querySelector('.facilities').innerHTML = `
+    <h2>${facilities.headline}</h2>
+    `
+    // du er nået hertil.
+    // det her virker ikke endnu...
+    options.forEach((option) => { 
+        let card = document.createElement("section");
+        card.classList = "facility-section";
+        let image = document.createElement("img");
+        let tekst = document.createElement("p");
+        let link = document.createElement("a");
+
+        image.src = option.icon
+        titel.textContent = option.headline;
+        tekst.textContent = option.text;
+
+        card.append(image);
+        card.append(this.title);
+        card.append(tekst);
+        
+        options.append(card);
+
+    });
     
 }) // DOMContentLoaded slut
