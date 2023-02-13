@@ -14,6 +14,31 @@ document.addEventListener("DOMContentLoaded", function() {
     </button>
     </section>
     `
+
+    let serviceSection = document.querySelector(".services");
+
+    services.forEach((service) => { 
+        let card = document.createElement("article");
+        card.classList = "article-cards";
+        let image = document.createElement("img");
+        let titel = document.createElement("h3");
+        let tekst = document.createElement("p");
+        let link = document.createElement("a");
+
+        image.src = service.illustration;
+        titel.textContent = service.headline;
+        tekst.textContent = service.text;
+        link.textContent = service.linktext;
+
+        card.append(image);
+        card.append(titel);
+        card.append(tekst);
+        card.append(link);  
+        serviceSection.append(card);
+
+    });
+
+
         
 
 
