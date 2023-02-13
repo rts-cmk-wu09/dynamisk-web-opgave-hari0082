@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    hero.headline = hero.headline.replace(
+        "save your time",
+        "<span>save your time</span>"
+    );
 
     document.querySelector('.hero').innerHTML = `
     <figure class="hero-pic">
@@ -38,15 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
-
-        
-
-
-    // slå dig løs her... 
     
-    //eksempel på at udskrive alle overskrifter i services i konsollen:
-/* services.forEach(service => { 
-        console.log(service.text)
-}) */
     
 }) // DOMContentLoaded slut
