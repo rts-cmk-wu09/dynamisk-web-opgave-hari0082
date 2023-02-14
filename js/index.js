@@ -136,4 +136,26 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
+    // advantages
+
+    let advantagesSection = document.querySelector(".advantages");
+
+    advantages.forEach((advantage) => { 
+        let card = document.createElement("section");
+        card.classList = "advantage-section";
+        let image = document.createElement("img");
+        let title = document.createElement("h3");
+        let tekst = document.createElement("p");
+
+        image.src = advantage.icon
+        title.textContent = advantage.headline;
+        tekst.textContent = advantage.text;
+
+        card.append(image);
+        card.append(title);
+        card.append(tekst);
+
+        advantagesSection.append(card)
+
+    });
 }) // DOMContentLoaded slut
