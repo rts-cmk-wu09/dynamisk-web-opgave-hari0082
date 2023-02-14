@@ -51,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     let facilitiesWrapper = document.createElement("div")
     facilitiesWrapper.classList = "faciWrap";
-    facilitySection.append(facilitiesWrapper)
+
+    facilitySection.append(facilitiesWrapper);
 
     //------ Det her kan man også gøre // 
     /* document.querySelector('.facilities').innerHTML = `
@@ -77,8 +78,11 @@ document.addEventListener("DOMContentLoaded", function() {
         card.append(tekst);
         card.append(show);
 
-        facilitySection.append(card)
+        facilitiesWrapper.append(card)
 
     });
+
     
+    
+
 }) // DOMContentLoaded slut
