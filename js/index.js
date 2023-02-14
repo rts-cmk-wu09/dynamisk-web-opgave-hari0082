@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    // hero
+
     hero.headline = hero.headline.replace(
         "save your time",
         "<span>save your time</span>"
@@ -18,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
     </button>
     </section>
     `
+
+    // services
 
     let serviceSection = document.querySelector(".services");
 
@@ -41,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function() {
         serviceSection.append(card);
 
     });
+
+    // facilities
 
     let facilitySection = document.querySelector(".facilities");
 
@@ -82,7 +88,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+    // sites
+
+    let siteSection = document.querySelector(".sites");
+
+    let aside = document.createElement("div")
+    aside.classList = "aside"
+    siteSection.append(aside)
+
+    let headline = document.createElement("h2");
+    headline.textContent = sites.headline;
+    aside.append(headline)
+
+    let text = document.createElement("p");
+    text.textContent = sites.text;
+    aside.append(text)
+
+    let btn = document.createElement("button");
+    btn.innerHTML = `<img src="${sites.btnicon}">Start`;
+    aside.append(btn); 
     
-    
+    let siteWrapper = document.createElement("div")
+    siteWrapper.classList = "siteWrap";
+    siteSection.append(siteWrapper);
+
+
+    sites.places.forEach((place) => { 
+        let card = document.createElement("section");
+        card.classList = "site-section";
+        let image = document.createElement("img");
+        let name = document.createElement("h3");
+        let city = document.createElement("p");
+        let view = document.createElement("a");
+
+        image.src = place.img;
+        name.textContent = place.name;
+        city.textContent = place.city;
+        view.textContent = place.a;
+
+        card.append(image);
+        card.append(name);
+        card.append(city);
+        card.append(view);
+
+        siteWrapper.append(card)
+
+    });
+
 
 }) // DOMContentLoaded slut
