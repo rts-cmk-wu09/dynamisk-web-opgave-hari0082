@@ -139,6 +139,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // advantages
 
     let advantagesSection = document.querySelector(".advantages");
+    
+    let titel = document.createElement("h2");
+    titel.textContent = "Our Advantages";
+    advantagesSection.append(titel);
+
+    let adWrapper = document.createElement("div")
+    adWrapper.classList = "adWrap";
+    advantagesSection.append(adWrapper);
 
     advantages.forEach((advantage) => { 
         let card = document.createElement("section");
