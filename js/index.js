@@ -166,4 +166,85 @@ document.addEventListener("DOMContentLoaded", function() {
         adWrapper.append(card)
 
     });
+
+    // footer
+
+    let body = document.querySelector("body")
+
+    let footer = document.createElement("footer");
+    footer.classList = "footer";
+    body.append(footer);
+
+    let container = document.createElement("div")
+    container.classList = "fotter-con";
+    footer.append(container)
+
+    let rightside = document.createElement("div")
+    rightside.classList = "rightside"
+    container.append(rightside)
+
+    let overskrift = document.createElement("h4");
+    overskrift.textContent = footerdata.headline;
+    rightside.append(overskrift)
+
+    let tekst = document.createElement("p");
+    tekst.textContent = footerdata.text;
+    rightside.append(tekst)
+
+    // wrapper til infos
+    let infoWrap = document.createElement("section");
+    infoWrap.classList = "info-wrapper";
+    container.append(infoWrap);
+
+
+    // løkke til mine array
+    
+    footerdata.infos.forEach((info) => { 
+        let card = document.createElement("section");
+        infoWrap.append(card)
+        card.classList = "info-section";
+        
+        let title = document.createElement("h4");
+        title.textContent = info.title;
+        card.append(title);
+
+        let list = document.createElement("ul")
+        card.append(list)
+        
+        info.links.forEach((link) => {
+
+            let item = document.createElement("li");
+            list.append(item) 
+            let a = document.createElement("a");
+            item.append(a)
+            a.innerText = link
+            a.href = "#"
+        })
+        
+    });
+
+
+    // wrapper til footer bottom info
+    let fotterBottom = document.createElement("section");
+    fotterBottom.classList = "footer-bot";
+    footer.append(fotterBottom);
+
+    let right = document.createElement("p");
+    right.textContent = footerdata.rights;
+    fotterBottom.append(right)
+
+    let bottomlist = document.createElement("ul")
+    fotterBottom.append(bottomlist)
+    footerdata.bottomlinks.forEach((link) => {
+
+        let item = document.createElement("li");
+        bottomlist.append(item) 
+
+        let a = document.createElement("a");
+        item.append(a)
+        a.innerText = link
+        a.href = "#"
+    });
+    
+
 }) // DOMContentLoaded slut
