@@ -105,6 +105,7 @@ let advantages = [
     },
 ]
 
+// Opret dit dataobjekt til footerens indhold herunder
 
 let footerdata = {
     headline: "Easy Camper",
@@ -132,4 +133,4 @@ let footerdata = {
     ]
 }
 
-// Opret dit dataobjekt til footerens indhold herunder
+// Færdig
