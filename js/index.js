@@ -246,5 +246,6 @@ document.addEventListener("DOMContentLoaded", function() {
         a.href = "#"
     });
     
+    
 
 }) // DOMContentLoaded slut
