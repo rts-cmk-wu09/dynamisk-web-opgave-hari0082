@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
         card.append(title);
         card.append(tekst);
 
-        advantagesSection.append(card)
+        adWrapper.append(card)
 
     });
 }) // DOMContentLoaded slut
