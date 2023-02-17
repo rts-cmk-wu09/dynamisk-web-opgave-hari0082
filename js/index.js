@@ -223,6 +223,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
     });
 
+    /* Send til Maria */
 
     // wrapper til footer bottom info
     let fotterBottom = document.createElement("section");
@@ -245,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function() {
         a.innerText = link
         a.href = "#"
     });
-    
+
     
 
 }) // DOMContentLoaded slut
